@@ -2,6 +2,31 @@
 
 Suite of tools to merge multiple external calendars into a single view or a single file for importing.
 
+## Installation
+`mkdir your_directory`
+
+`cd your_directory`
+
+Copy the file `.env.json` into `your_directory`. You can find an example of that file here:
+https://mcw-anesth-calendar.now.sh/.env.json
+
+Copy all files under the `master` branch of ics-merger into `your_directory`.
+
+If you are working on a windows computer, make the following changes to the `package.json` file:
+
+- replace `rm -rf` by `rimraf`
+- replace `NODE_ENV=production node dist/server.js` by `SET NODE_ENV=production & node dist/server.js`
+- replace `NODE_ENV=production webpack -p` by `SET NODE_ENV=production & webpack -p`
+- similar changes to NODE_ENV in "build:components", "build:helpers", ...
+- Run `npm install rimraf` or add `"rimraf":"^2.6.2",` to the devDependencies in `package.json`.
+
+Run `npm install --dev`
+
+Run `npm run-script build`
+
+Run `npm start`
+
+
 ## Components
 
 ### Package
